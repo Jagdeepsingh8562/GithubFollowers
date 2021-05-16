@@ -1,5 +1,5 @@
 //
-//  ErrorMessages.swift
+//  GFError.swift
 //  GithubFollowers
 //
 //  Created by Jagdeep Singh on 16/05/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ErrorMessages: String {
+enum GFError: String, Error {
     case noInternet = "Unableto complete your request. Please check your internet connection"
     case invaildRequest = "This username created an invaild request. Please try again"
     case invaildResponse = "Invaild response form the server please try again"

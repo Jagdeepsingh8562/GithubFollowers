@@ -16,7 +16,7 @@ class FollowersListVC: UIViewController {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        NetworkManager.shared.getFollowers(for: username, page: 1, completion: handlerGetFollowers(followers:errorMessage:))
+        NetworkManager.shared.getFollowers(for: username, page: 1, completion: handlerGetFollowers(result:) )
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,13 +24,12 @@ class FollowersListVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    private func handlerGetFollowers(followers: [Follower]?,errorMessage: ErrorMessages?) {
-        if let followers = followers {
-            print(followers.count)
-            print(followers)
-        }
-        else {
-            self.presentGFAlertOnMainThread(title: "Networ error", message: errorMessage!.rawValue, buttonTitle: "Ok")
+    private func handlerGetFollowers(result: Result<[Follower], GFError>) {
+        switch result {
+        case .success(let followers):
+                print(followers.count)
+        case .failure(let error):
+            self.presentGFAlertOnMainThread(title: "Networ error", message: error.rawValue, buttonTitle: "Ok")
         }
     }
 }
