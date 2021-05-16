@@ -12,23 +12,23 @@ class NetworkManager {
     let baseUrl = "https://api.github.com/"
     private init() {}
     
-    func getFollowers(for username: String,page: Int,completion: @escaping ([Follower]?,String?) -> Void) {
+    func getFollowers(for username: String,page: Int,completion: @escaping ([Follower]?,ErrorMessages?) -> Void) {
         let endpoint = baseUrl + "users/\(username)/followers?per_page=100&page=\(page)"
         guard let url = URL(string: endpoint) else {
-            completion(nil,"This username created an invaild request. Please try again")
+            completion(nil,ErrorMessages.invaildRequest)
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                completion(nil,"Unableto complete your request. Please check your internet connection")
+                completion(nil,.noInternet)
                 return
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(nil, "Invaild response form the server please try again")
+                completion(nil, .invaildResponse)
                 return
             }
             guard let data = data else {
-                completion(nil,"The data from the server was invaild. Please try again.")
+                completion(nil,.noData)
                 return
             }
             do {
@@ -39,7 +39,7 @@ class NetworkManager {
             }
             catch {
                 DispatchQueue.main.async {
-                    completion(nil,"The data from the server was invaild. Please try again.")
+                    completion(nil,.noData)
                 }
             }
         }
