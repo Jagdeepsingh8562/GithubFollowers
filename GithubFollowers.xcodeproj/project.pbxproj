@@ -25,6 +25,7 @@
 		B980C2FD26511A5200722E77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980C2FC26511A5200722E77 /* User.swift */; };
 		B99A03EB26504435009637F9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99A03EA26504435009637F9 /* UIViewController+Ext.swift */; };
 		B9C5E5002662486F00878C16 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5E4FF2662486F00878C16 /* GFEmptyStateView.swift */; };
+		B9C5E50226626BB100878C16 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5E50126626BB100878C16 /* UserInfoVC.swift */; };
 		B9F52984264FABB10090CAFE /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F52983264FABB10090CAFE /* FollowersListVC.swift */; };
 		B9F87C59265035FC00C7AA26 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F87C58265035FC00C7AA26 /* GFTitleLabel.swift */; };
 		B9F87C5B265037B800C7AA26 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F87C5A265037B800C7AA26 /* GFBodyLabel.swift */; };
@@ -52,6 +53,7 @@
 		B980C2FC26511A5200722E77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B99A03EA26504435009637F9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		B9C5E4FF2662486F00878C16 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		B9C5E50126626BB100878C16 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		B9F52983264FABB10090CAFE /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		B9F87C58265035FC00C7AA26 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		B9F87C5A265037B800C7AA26 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				B92026CF264E7AB7005BDA19 /* SearchVC.swift */,
 				B92026D1264E7B19005BDA19 /* FavoritesListVC.swift */,
 				B9F52983264FABB10090CAFE /* FollowersListVC.swift */,
+				B9C5E50126626BB100878C16 /* UserInfoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				B90F84FF2652151E00945332 /* FollowerCell.swift in Sources */,
 				B90F8501265215EA00945332 /* GFAvatarImageView.swift in Sources */,
 				B980C2FD26511A5200722E77 /* User.swift in Sources */,
+				B9C5E50226626BB100878C16 /* UserInfoVC.swift in Sources */,
 				B9F87C5D265039A900C7AA26 /* GFAlertVC.swift in Sources */,
 				B980C2FB2651189500722E77 /* Follower.swift in Sources */,
 				B9F87C5B265037B800C7AA26 /* GFBodyLabel.swift in Sources */,
