@@ -24,7 +24,7 @@ struct User: Codable {
     var bio: String?
     let publicRepos, publicGists, followers, following: Int
     let followingURL: String
-    let createdAt: String?
+    let createdAt: String
 
     enum CodingKeys: String, CodingKey {
         case login
