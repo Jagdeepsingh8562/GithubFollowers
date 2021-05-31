@@ -14,9 +14,7 @@ class UserInfoVC: UIViewController {
     let itemViewTwo = UIView()
     var itemViews:[UIView] = []
     
-    
     var username: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,8 +64,6 @@ class UserInfoVC: UIViewController {
         
         itemViewOne.backgroundColor = . systemPink
         itemViewTwo.backgroundColor = .systemBlue
-        
-        
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
