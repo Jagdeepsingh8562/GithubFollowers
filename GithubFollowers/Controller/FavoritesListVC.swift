@@ -33,7 +33,6 @@ class FavoritesListVC: UIViewController {
     
     private func configureTableView() {
         view.addSubview(tableView)
-        //tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.frame = view.bounds
         tableView.rowHeight = 80
         tableView.delegate = self
@@ -83,9 +82,7 @@ extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        let destVC = FollowersListVC()
-        destVC.username = favorite.login
-        destVC.title = favorite.login
+        let destVC = FollowersListVC(username: favorite.login)
         
         navigationController?.pushViewController(destVC, animated: true)
     }
